@@ -10,6 +10,7 @@ namespace ExternalDataReview
     public class Student
     {
         // Many student properties
+        // Major at their university
 
         public int Id { get; set; }
         public string FirstName { get; set; }
