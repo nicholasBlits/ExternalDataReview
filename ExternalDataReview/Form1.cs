@@ -51,6 +51,8 @@ namespace ExternalDataReview
                     sql.Parameters.AddWithValue("@Major", student.Major);
                     sql.ExecuteNonQuery();
                 }
+
+                MessageBox.Show("Done.");
             }
 
         }
