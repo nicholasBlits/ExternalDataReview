@@ -15,6 +15,7 @@ namespace ExternalDataReview
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        // Creating the Major property in the class
         public string Major { get; set; }
     }
 }
