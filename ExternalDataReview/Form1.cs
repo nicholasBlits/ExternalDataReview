@@ -26,6 +26,7 @@ namespace ExternalDataReview
             student.FirstName = tbFirstName.Text;
             student.LastName = tbLastName.Text;
             student.Major = tbMajor.Text;
+            MessageBox.Show("All student data received.");
             AddStudentToDb(student);
         }
 
@@ -76,6 +77,7 @@ namespace ExternalDataReview
 
                     dgvStudents.DataSource = dt;
                 }
+                MessageBox.Show("Student data fetched successfully.");
             }
         }
     }
