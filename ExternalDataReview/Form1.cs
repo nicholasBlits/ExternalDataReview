@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+// New code
 
 namespace ExternalDataReview
 {
     public partial class Form1 : Form
     {
-        string connectionString = @"server=(localdb)\MSSQLLocalDB;database=DU;Trusted_connection=true";
+        string connectionString = @"server=(localdb)\MSSQLLocalDB;database=Dominican;Trusted_connection=true";
         public Form1()
         {
             InitializeComponent();
@@ -41,9 +42,9 @@ namespace ExternalDataReview
             using (SqlConnection sqlConnection = new SqlConnection(connectionString))
             {
                 sqlConnection.Open();
-                string query = "INSERT INTO dbo.Student(Id, FirstName, LastName, Major)" + "VALUES(@Id, @FirstName, @LastName, @Major)";
+                string newQuery = "INSERT INTO dbo.Student(Id, FirstName, LastName, Major)" + "VALUES(@Id, @FirstName, @LastName, @Major)";
 
-                using (SqlCommand sql = new SqlCommand(query, sqlConnection))
+                using (SqlCommand sql = new SqlCommand(newQuery, sqlConnection))
                 {
                     sql.Parameters.AddWithValue("@Id", student.Id);
                     sql.Parameters.AddWithValue("@FirstName", student.FirstName);
